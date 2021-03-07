@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="5sp"
+    android:background="@drawable/border_blue_shape"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/apartmentTitle"
+        android:gravity="center|start"
+        android:textSize="14sp"
+        android:layout_margin="5sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/apartmentHREF"
+        android:layout_width="match_parent"
+        android:gravity="center|start"
+        android:textSize="11sp"
+        android:layout_margin="5sp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/apartmentRayon"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:layout_margin="5sp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/apartmentAdress"
+        android:layout_width="match_parent"
+        android:gravity="center|start"
+        android:textSize="11sp"
+        android:layout_margin="5sp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+
+     <TextView
+        android:id="@+id/apartmentPrice"
+        android:layout_width="match_parent"
+        android:gravity="center|start"
+        android:textSize="11sp"
+        android:layout_margin="5sp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/apartmentSubprice"
+        android:layout_width="match_parent"
+        android:gravity="center|start"
+        android:textSize="11sp"
+        android:layout_margin="5sp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/apartmentPhoneNumber"
+        android:layout_width="match_parent"
+        android:gravity="center|start"
+        android:textSize="11sp"
+        android:layout_margin="5sp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/apartmentDescription"
+        android:layout_width="match_parent"
+        android:gravity="center|start"
+        android:textSize="11sp"
+        android:layout_margin="5sp"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
