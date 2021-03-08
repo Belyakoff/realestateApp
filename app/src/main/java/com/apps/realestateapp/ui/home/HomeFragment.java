@@ -39,22 +39,27 @@ public class HomeFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
 
-        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-
-
-        item.setTitle("abc");
-        item.setHREF("Lorem ipsum");
-        apartmentArrayList.add(item);
-        apartmentArrayList.add(item);
-
+       //item.setTitle("abc");
+       // item.setHREF("Lorem ipsum");
+        //apartmentArrayList.add(item);
+        //apartmentArrayList.add(item);
 
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         rvHeadline = view.findViewById(R.id.apartmentsList);
 
-        setupRecyclerView();
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        homeViewModel.init();
+        homeViewModel.getApartmentRepository().observe(getViewLifecycleOwner(), apartments -> {
 
+           //Log.d("DEBUG Fragment apartment", apartments.get(0).getTitle());
+            apartmentArrayList.addAll(apartments);
+            apartmentListAdapter.notifyDataSetChanged();
+        });
+
+        setupRecyclerView();
         return view;
     }
 

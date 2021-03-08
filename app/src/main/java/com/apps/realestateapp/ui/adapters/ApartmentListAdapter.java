@@ -25,7 +25,6 @@ public class ApartmentListAdapter extends RecyclerView.Adapter<ApartmentListAdap
     public ApartmentListAdapter(Context context, ArrayList<Apartment> apartments) {
         this.context    = context;
         this.apartments = apartments;
-        Log.v("DEBUG", apartments.get(0).getHREF());
     }
 
     @NonNull

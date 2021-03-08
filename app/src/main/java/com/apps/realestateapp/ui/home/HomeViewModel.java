@@ -4,16 +4,26 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.apps.realestateapp.model.Apartment;
+import com.apps.realestateapp.networking.ApartmentsRepository;
+
+import android.util.Log;
+import java.util.List;
+
 public class HomeViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private MutableLiveData<List<Apartment>> mutableLiveData;
+    private ApartmentsRepository apartmentsRepository;
 
-    public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+    public void init(){
+        if (mutableLiveData != null){
+            return;
+        }
+        apartmentsRepository = ApartmentsRepository.getInstance();
+        mutableLiveData = apartmentsRepository.getApartments();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<List<Apartment>> getApartmentRepository() {
+        return mutableLiveData;
     }
 }
