@@ -38,6 +38,12 @@ public class ApartmentListAdapter extends RecyclerView.Adapter<ApartmentListAdap
     public void onBindViewHolder(@NonNull ApartmentListAdapter.ApartmentListViewHolder holder, int position) {
         holder.apartmentTitle.setText(apartments.get(position).getTitle());
         holder.apartmentHREF.setText(apartments.get(position).getHREF());
+        holder.apartmentRayon.setText(apartments.get(position).getRayon());
+        holder.apartmentAdress.setText(apartments.get(position).getAdress());
+        holder.apartmentPrice.setText(String.valueOf(apartments.get(position).getPrice()));
+        holder.apartmentSubprice.setText(apartments.get(position).getSubprice());
+        holder.apartmentPhoneNumber.setText(apartments.get(position).getPhoneNumber());
+        holder.apartmentDescription.setText(apartments.get(position).getDescription());
     }
 
     @Override
@@ -49,13 +55,24 @@ public class ApartmentListAdapter extends RecyclerView.Adapter<ApartmentListAdap
 
         TextView apartmentTitle;
         TextView apartmentHREF;
+        TextView apartmentRayon;
+        TextView apartmentAdress;
+        TextView apartmentPrice;
+        TextView apartmentSubprice;
+        TextView apartmentPhoneNumber;
+        TextView apartmentDescription;
 
         public ApartmentListViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            apartmentTitle = itemView.findViewById(R.id.apartmentTitle);
-            apartmentHREF  = itemView.findViewById(R.id.apartmentHREF);
-
+            apartmentTitle       = itemView.findViewById(R.id.apartmentTitle);
+            apartmentHREF        = itemView.findViewById(R.id.apartmentHREF);
+            apartmentRayon       = itemView.findViewById(R.id.apartmentRayon);
+            apartmentAdress      = itemView.findViewById(R.id.apartmentAdress);
+            apartmentPrice       = itemView.findViewById(R.id.apartmentPrice);
+            apartmentSubprice    = itemView.findViewById(R.id.apartmentSubprice);
+            apartmentPhoneNumber = itemView.findViewById(R.id.apartmentPhoneNumber);
+            apartmentDescription = itemView.findViewById(R.id.apartmentDescription);
         }
     }
 }

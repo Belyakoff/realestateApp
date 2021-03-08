@@ -37,10 +37,8 @@ public class ApartmentsRepository {
             public void onResponse(Call<List<Apartment>> call,
                                    Response<List<Apartment>> response) {
                 if (response.isSuccessful()){
-
+                    Log.d("DEBUG onresponse","ok");
                     apartmentsData.setValue(response.body());
-                    Log.d("REPO onresponse ", response.body().get(0).getHREF());
-                    Log.d("REPO onresponse ", response.body().get(0).getTitle());
                 }
             }
 

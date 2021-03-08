@@ -25,7 +25,6 @@ import com.apps.realestateapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.util.Log;
 
 
 public class HomeFragment extends Fragment {
@@ -34,17 +33,10 @@ public class HomeFragment extends Fragment {
     private ApartmentListAdapter apartmentListAdapter;
     private HomeViewModel homeViewModel;
     RecyclerView rvHeadline;
-    Apartment item = new Apartment();
-
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-
-       //item.setTitle("abc");
-       // item.setHREF("Lorem ipsum");
-        //apartmentArrayList.add(item);
-        //apartmentArrayList.add(item);
 
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -54,7 +46,6 @@ public class HomeFragment extends Fragment {
         homeViewModel.init();
         homeViewModel.getApartmentRepository().observe(getViewLifecycleOwner(), apartments -> {
 
-           //Log.d("DEBUG Fragment apartment", apartments.get(0).getTitle());
             apartmentArrayList.addAll(apartments);
             apartmentListAdapter.notifyDataSetChanged();
         });
