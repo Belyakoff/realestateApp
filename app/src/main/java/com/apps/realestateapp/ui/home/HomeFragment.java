@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.fragment.app.Fragment;
 
@@ -15,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import com.apps.realestateapp.ui.adapters.ApartmentListAdapter;
 import com.apps.realestateapp.model.Apartment;
@@ -40,11 +42,12 @@ public class HomeFragment extends Fragment {
 
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
+
         item.setTitle("abc");
         item.setHREF("Lorem ipsum");
         apartmentArrayList.add(item);
         apartmentArrayList.add(item);
-        Log.v("DEBUG", apartmentArrayList.get(0).getHREF().toString());
+
 
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
